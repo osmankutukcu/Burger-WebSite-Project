@@ -1,0 +1,182 @@
+// BANNER----
+.banner {
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include back;
+
+  &-left {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    button {
+      @extend %button;
+    }
+  }
+  &-middle {
+    width: 33%;
+    position: relative;
+    @include hover;
+
+    span {
+      position: absolute;
+      top: 15%;
+      right: 10%;
+      @include price;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 50px 0;
+    }
+  }
+  &-right {
+    width: 33%;
+    text-align: end;
+    h4 {
+      color: $theme2-color;
+      font-size: 28px;
+    }
+    p {
+      color: white;
+    }
+  }
+}
+//PRODUCT-----
+.product {
+  padding: 20px 50px;
+  border-top: 5px solid black;
+  &-title {
+    text-align: center;
+    h1 {
+      color: $theme-color;
+    }
+    span {
+      font-family: $title-font;
+    }
+  }
+  &s {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    &-card {
+      width: 270px;
+      text-align: center;
+      border-radius: 40px 40px 0px 0px;
+      box-shadow: 2px 2px 5px gray;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      @include hover;
+      img {
+        width: 100%;
+        object-fit: contain;
+        background-color: $theme-color;
+        text-overflow: ellipsis;
+        border-radius: 40px 40px 0px 0px;
+        padding-top: 17px;
+      }
+      p {
+        margin: 10px 0;
+      }
+
+      &-content {
+        display: flex;
+        justify-content: space-around;
+        span {
+          @include price;
+        }
+      }
+      &-order {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+
+        i {
+          @include icon;
+          background-color: black;
+          color: white;
+        }
+        button {
+          @extend %button;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// ORDER
+.order {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  border-top: 5px solid black;
+  &-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 9px black;
+    overflow-x: hidden;
+    transform: rotate(5deg);
+    &-left {
+      background-color: $theme-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      width: 65%;
+      align-items: start;
+      padding: 0 0 15px 15px;
+      h3 {
+        color: white;
+      }
+      button {
+        @extend %button;
+        background-color: white;
+        color: $theme-color;
+      }
+    }
+    &-right {
+      width: 35%;
+      background-color: $theme2-color;
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+// SOCIAL
+.social {
+  width: 100%;
+  border-top: 5px solid black;
+  padding: 20px 50px;
+  &-title {
+    text-align: center;
+    color: $theme-color;
+  }
+  &-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    &s {
+      flex: 1 1 220px;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  @include back;
+  //---
+  &-left {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+    @include logo;
+    a {
+      font-weight: 500;
+      color: $theme-color;
+      cursor: pointer;
+    }
+  }
+  &-right {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-tel {
+      display: flex;
+      gap: 5px;
+      color: white;
+      i {
+        @include icon;
+      }
+    }
+    a {
+      font-weight: 500;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  //----
+}

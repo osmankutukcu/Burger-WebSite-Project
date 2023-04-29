@@ -1,0 +1,46 @@
+.footer {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  border-top: 5px solid black;
+  gap: 50px;
+  &-title {
+    @include logo;
+    text-align: start;
+    P {
+      font-size: 48px;
+      width: 200px;
+    }
+    ul {
+      display: flex;
+      gap: 10px;
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+  &-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    ul {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      li {
+        &:nth-child(1) {
+          font-weight: 700;
+        }
+        &:hover {
+          color: $theme-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  li {
+    list-style-type: none;
+  }
+}
